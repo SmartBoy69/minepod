@@ -14,3 +14,6 @@ RUN sudo apt-get update && \
     wget https://launcher.mojang.com/download/Minecraft.deb && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f
+
+RUN cp /home/gitpod/.minecraft /workspace/minepod/.minecraft && \
+    sudo ln -s /home/gitpod/.minecraft /workspace/minepod/.minecraft
