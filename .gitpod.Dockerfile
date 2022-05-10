@@ -20,4 +20,3 @@ RUN sudo apt-get update && \
     sudo dpkg -i m64py_0.2.3-0_all.deb; exit 0 && \
     sudo apt -y install -f
     
-RUN sudo pip -y install
