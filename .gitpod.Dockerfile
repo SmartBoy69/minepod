@@ -15,6 +15,8 @@ RUN sudo apt-get update && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f
 
+RUN sudo pip install pyqt5
+
 RUN sudo apt-get update && \
     wget http://sourceforge.net/projects/m64py/files/m64py-0.2.3/m64py_0.2.3-0_all.deb && \
     sudo dpkg -i m64py_0.2.3-0_all.deb; exit 0 && \
