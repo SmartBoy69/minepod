@@ -14,8 +14,3 @@ RUN sudo apt-get update && \
     wget https://launcher.mojang.com/download/Minecraft.deb && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f 
-
-RUN sudo apt-get update && \
-   wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.4-35.0.18/forge-1.16.4-35.0.18-installer.jar -O ~/Downloads/forge-1.16.4-35.0.18-installer.jar && \
-   cd ~/Downloads; exit 0 && \
-   java -jar forge-1.16.4-35.0.18-installer.jar
