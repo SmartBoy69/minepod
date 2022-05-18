@@ -16,6 +16,6 @@ RUN sudo apt-get update && \
     sudo apt -y install -f 
 
 RUN sudo apt-get update && \
-   wget http://sourceforge.net/projects/m64py/files/m64py-0.2.3/m64py_0.2.3-0_all.deb && \
-   sudo dpkg -i m64py_0.2.3-0_all.deb; exit 0 && \
-   sudo apt -y install -f
+   wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.16.4-35.0.18/forge-1.16.4-35.0.18-installer.jar -O ~/Downloads/forge-1.16.4-35.0.18-installer.jar && \
+   cd ~/Downloads; exit 0 && \
+   java -jar forge-1.16.4-35.0.18-installer.jar
