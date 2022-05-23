@@ -14,3 +14,9 @@ RUN sudo apt-get update && \
     wget https://launcher.mojang.com/download/Minecraft.deb && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f 
+
+RUN apt install -y lzip squashfs-tools unzip wget
+RUN cd /home/user 
+RUN wget https://raw.githubusercontent.com/Sigfrodr/anbox-playstore-installer/master/install-playstore.sh
+RUN chmod +x install-playstore.sh
+RUN ./install-playstore.sh
