@@ -15,8 +15,7 @@ RUN sudo apt-get update && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f 
 
-RUN apt install -y lzip squashfs-tools unzip wget
-RUN cd /home/user 
-RUN wget https://raw.githubusercontent.com/Sigfrodr/anbox-playstore-installer/master/install-playstore.sh
-RUN chmod +x install-playstore.sh
-RUN ./install-playstore.sh
+RUN sudo apt-get upgrade && \
+    wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb && \
+    sudo dpkg --install steam.deb; exit 0 && \
+    sudo apt -y install -f
