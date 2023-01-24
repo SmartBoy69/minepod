@@ -15,6 +15,6 @@ RUN sudo apt-get update && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f 
 
-RUN sudo add-apt-repository multiverse
-    sudo apt update
+RUN sudo add-apt-repository multiverse && \
+    sudo apt update && \
     sudo apt install steam 
