@@ -15,7 +15,7 @@ RUN sudo apt-get update && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
     sudo apt -y install -f 
 
-RUN sudo apt-get upgrade && \
-    wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb && \
-    sudo dpkg --install steam.deb; exit 0 && \
+RUN sudo apt-get upgrade 
+    wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb 
+    sudo dpkg --install steam.deb
     sudo apt -y install -f
