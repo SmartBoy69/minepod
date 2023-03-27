@@ -1,4 +1,5 @@
 FROM gitpod/workspace-full-vnc:2022-05-08-14-31-53
+
 RUN sudo apt-get update && \
     sudo apt-get install -y libgtk-3-dev && \
     sudo rm -rf /var/lib/apt/lists/
@@ -7,6 +8,7 @@ RUN sudo apt-get update && \
 RUN sudo rm -rf /opt/novnc \
     && sudo git clone --depth 1 --single-branch --branch pointer-lock-api https://github.com/mteam88/noVNC /opt/novnc \
     && sudo git clone --depth 1 https://github.com/novnc/websockify /opt/novnc/utils/websockify
+
 RUN sudo apt-get update && \
     wget https://launcher.mojang.com/download/Minecraft.deb && \
     sudo dpkg -i Minecraft.deb; exit 0 && \
@@ -16,3 +18,6 @@ RUN sudo apt-get update && \
     wget http://sourceforge.net/projects/m64py/files/m64py-0.2.3/m64py_0.2.3-0_all.deb && \
     sudo dpkg -i m64py_0.2.3-0_all.deb; exit 0 && \
     sudo apt -y install -f
+
+
+RUN sudo pip -y install
